@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Tevy David</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,900italic,300italic|PT+Mono|Merriweather' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico"/>
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/navigation.js"></script>
+  </head>
+
+  <body>
+    <header class="nav-bar">
+      <nav class="group nav-menu">
+        <ul class="nav-list group">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="intro" class="group">
+      <h1>Hello, I'm Tevy</h1>
+      <h3>I'm a software engineer</h3>
+    </section>
+    <section id="about" class="group">
+      <h1>About Me</h1>
+      <p>
+        I'm a San Francisco-based web developer with experience in Ruby, JavaScript,
+        HTML / CSS, SQL, RESTful APIs and MVC architecture. I love the problem
+        solving and creativity involved in programming, and I'm eager to further
+        develop my skills.
+      </p>
+      <p>
+        When I'm not coding, I love surfing, basketball, and reading the week.
+      </p>
+    </section>
+    <section id="skills" class="group">
+      <h1>Skills and Technologies</h1>
+      <ul class="skills-list group">
+        <li><img src="./images/ruby.png"><h3>Ruby</h3></li>
+        <li><img src="./images/rails.png"><h3>Rails</h3></li>
+        <li><img src="./images/javascript.png"><h3>JavaScript</h3></li>
+        <li><img src="./images/react.png"><h3>React</h3></li>
+        <li><img src="./images/flux.png"><h3>Flux</h3></li>
+      </ul>
+      <ul class="skills-list group">
+        <li><img src="./images/jquery.png"><h3>jQuery</h3></li>
+        <li><img src="./images/postgresql.png"><h3>PostgreSQL</h3></li>
+        <li><img src="./images/HTML5.png"><h3>HTML5</h3></li>
+        <li><img src="./images/css.png"><h3>CSS3</h3></li>
+        <li><img src="./images/git.png"><h3>Git</h3></li>
+      </ul>
+    </section>
+    <section id="projects" class="group">
+      <h1>Projects</h1>
+      <ul class="projects-list">
+        <li class="project group rendez-zoo">
+          <figure><img src="./images/notabl.png">
+            <div class="project-links">
+              <a href="http://notabl.herokuapp.com">Live</a>
+              <a href="http://www.github.com/tevydavid/tevryNote">Github</a>
+            </div>
+          </figure>
+          <div class="project-desc group">
+            <h2>Notabl</h2>
+            <h3>Take your notes anywhere with this elogant web application inspired by Evernote</h3>
+            <ul>
+              <li>- BCrypt Log-In and user session to insure note privacy and security</li>
+              <li>- Efficient global searching algorith for quickly finding specific notes</li>
+              <li>- Single page structure facilitates quick page navigation</li>
+              <li>- Nested associations create information rich pages</li>
+            </ul>
+          </div>
+        </li>
+        <li class="project group asteroids">
+          <figure><img src="./images/mousecat.png">
+            <div class="project-links">
+              <a href="http://www.playmousecat.com">Play</a>
+              <a href="http://www.github.com/tevydavid/mouserails">Github</a>
+            </div>
+          </figure>
+          <div class="project-desc group">
+            <h2>MouseCat</h2>
+            <h3>An original concept Javascript game</h3>
+            <ul>
+              <li>- Time delta for maintaining object speed for canvas redraws.</li>
+              <li>- Leader board with daily and all time top scores</li>
+              <li>- Database tracks total games played and total cheeses eaten</li>
+              <li>- Excelent collision detection for eating cheeses and avoiding cats</li>
+            </ul>
+          </div>
+        </li>
+        <li class="project group chess">
+          <figure><img src="./images/chess.png">
+            <div class="project-links">
+              <a href="http://www.github.com/tevydavid/chess">Github</a>
+            </div>
+          </figure>
+          <div class="project-desc group">
+            <h2>Chess</h2>
+            <h3>A fully-featured two player chess played in terminal</h3>
+            <ul>
+              <li>- Multi-level class inheritance structure</li>
+              <li>- Move validation algorithms enable full move range including en passant</li>
+              <li>- Input hashes allow players to use coordinate notation</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="contact" class="group">
+      <h1>Contact Me</h1>
+      <ul class="contact-list group">
+        <li><a href="http://www.github.com/tevydavid"><i class="icon-github"></i></a></li>
+        <li><a href="mailto:tevydavid@gmail.com"><i class="icon-mail"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/tevydavid"><i class="icon-linkedin"></i></a></li>
+      </ul>
+      <h2>Or download my resume:</h2>
+      <a href="./docs/TevyJacobsGomesResume.pdf"><i class="icon-profile"></i></a>
+    </section>
+  </body>
+  <script>
+    $(function() {
+      new Navigation.NavBar($(".nav-bar"));
+      var target = $('#about').offset().top;
+
+      var interval = setInterval(function() {
+        if ($(window).scrollTop() >= target) {
+          $('.nav-bar').addClass("opaque");
+        } else {
+          $('.nav-bar').removeClass("opaque");
+        }
+      }, 100);
+    })
+
+  </script>
+
+
+</html>
